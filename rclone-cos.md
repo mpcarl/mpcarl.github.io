@@ -1,5 +1,5 @@
 # Connect to IBM Bluemix Cloud ObjectStorage with rclone
-[Rclone][rclone] provides a command line interface (cli) that you can use to quickyl and easily move data between a large number of different storage systems. One of those is [IBM Bluemix Cloud ObjectStorage][cos](COS) using both the S3 API and the Swift API. Below are instructions on how to configure for each system and sync files from Swift to COS.
+[Rclone][rclone] provides a command line interface (cli) that you can use to quickly and easily move data between a large number of different storage systems. One of those is [IBM Bluemix Cloud ObjectStorage][cos](COS) using both the S3 API and the Swift API. Below are instructions on how to configure for each system and sync files from Swift to COS.
 
 ## Installation
 Installation of Rclone is a simple matter of downloading the latest zip and getting in your $PATH. The [Rclone install][install] page has all the details.
@@ -9,7 +9,7 @@ Rclone provides a configuration wizard which can be run using the command:
 
 `rclone config`
 
-Before running the wizard you need your access key id, your secret access key, and the name of the bucket you want to mount. If you don't have this information, check out [these instructions][creds]. You will also need to know which COS [endpoint][endpoints] you will be using. While the wizard can be useful, an easier way is copy paste. The configuration is stored in the $HOME/.rclone.conf file. Use for favorite text editor to add the following entries being sure to substitute your access key id and secret access key:
+Before running the wizard you need your access key id, your secret access key, and the name of the bucket you want to mount. If you don't have this information, check out [these instructions][creds]. You will also need to know which COS [endpoint][endpoints] you will be using. While the wizard can be useful, an easier way is copy paste. The configuration is stored in the $HOME/.rclone.conf file. Use your favorite text editor to add the following entries being sure to substitute your access key id and secret access key:
 
 ```
 [COS-US-SOUTH]
@@ -106,13 +106,6 @@ Checks:                 0
 Transferred:            0
 Elapsed time:        2.2s
 ```
-
-## Configure rclone to access IBM COS S3 API
-In order to configure rclone to access your Swift buckets, you will need your Username and API Key. If you don't have this information, check out [these instructions][creds].
-
-## Using rclone with Swift
-
-
 
 [rclone]: https://rclone.org/
 [cos]: https://www.ibm.com/cloud-computing/products/storage/object-storage/
