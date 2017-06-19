@@ -6,7 +6,7 @@ The [s3fs] GitHub page has all the details on building and installing the packag
 
 ```
 sudo apt-get update
-sudo apt-get install automake autotools-dev g++ git libcurl4-gnutls-dev libfuse-dev libssl-dev libxml2-dev make pkg-config
+sudo apt-get install automake autotools-dev g++ git libcurl4-openssl-dev libfuse-dev libssl-dev libxml2-dev make pkg-config
 git clone https://github.com/s3fs-fuse/s3fs-fuse.git
 cd s3fs-fuse
 ./autogen.sh
@@ -14,6 +14,8 @@ cd s3fs-fuse
 make
 sudo make install
 ```
+Note: The above command is slightly different from the instructions provided by [s3fs][s3fs]. Testing has shown that replacing `libcurl4-gnutls-dev` with `libcurl4-openssl-dev` shows improved performance.
+
 ## Configuration
 In order to configure s3fs, you need your access key id, your secret access key, and the name of the bucket you want to mount. If you don't have this information, check out [these instructions][creds]. You will also need an existing bucket that you can mount. If you don't yet have a bucket, you can create one from the control portal. [These steps][buckets] will get you there.
 
@@ -33,7 +35,7 @@ sudo mkdir /mnt/mybucket
 3. Mount the bucking using the command below. Be sure to use the [endpoint] that corresponds to the location of your bucket. In this example, I will be using the US Cross Region service, private endpoint, and the bucket "mpc-bucket-a"
 
 ```
-sudo s3fs mpc-bucket-a /mnt/mybucket  -o passwd_file=$HOME/.cos_creds -o sigv2 -o url=http://s3-api.us-geo.objectstorage.service.networklayer.com
+sudo s3fs mpc-bucket-a /mnt/mybucket  -o passwd_file=$HOME/.cos_creds -o sigv2 -o use_path_request_style -o url=https://s3-api.us-geo.objectstorage.service.networklayer.com
 ```
 
 The bucket should now be mounted and available for use on the Linux system. If you have existing objects in your bucket, listing them on the Linux system will confirm you are connected.
