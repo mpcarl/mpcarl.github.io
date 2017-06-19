@@ -33,3 +33,5 @@ Once you select the details page of your COS Swift account, select the "View Cre
 
 
 [swift-access]: https://knowledgelayer.softlayer.com/procedure/access-object-storage-screen
+[sl]: https://control.softlayer.com
+[slos]: https://control.softlayer.com/storage/objectstorage
