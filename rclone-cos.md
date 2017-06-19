@@ -113,3 +113,4 @@ Elapsed time:        2.2s
 [install]: https://rclone.org/install/
 [endpoints]: https://ibm-public-cos.github.io/crs-docs/endpoints
 [rc-docs]: https://rclone.org/docs/
+[creds]: find_os_credentials
