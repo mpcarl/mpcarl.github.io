@@ -1,4 +1,4 @@
-# Connect to IBM Bluemix Cloud ObjectStorage with rclone
+# Connect to IBM Bluemix Cloud ObjectStorage (S3 API) with rclone
 [Rclone][rclone] provides a command line interface (cli) that you can use to quickly and easily move data between a large number of different storage systems. One of those is [IBM Bluemix Cloud ObjectStorage][cos](COS) using both the S3 API and the Swift API. Below are instructions on how to configure for each system and sync files from Swift to COS.
 
 ## Installation
