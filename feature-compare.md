@@ -83,8 +83,13 @@ See [Swift CDN support][3] and [CDN][7] for more details.
 
 ***CDN is not currently available in S3.***
 
-## Documentation coming soon...
+## Deprecated / removed function
+
 ### Search
+Swift ObjectStorage provides an integrated [search][search] function for ObjectStorage. This feature is not available IBM Cloud ObjectStorage (COS).
+
+## Documentation coming soon...
+
 ### API
 ### SDKs/Language bindings
 ### Versioning
@@ -104,3 +109,4 @@ See [Swift CDN support][3] and [CDN][7] for more details.
 [5]: https://docs.openstack.org/developer/swift/overview_acl.html#container-acls
 [6]: https://ibm-public-cos.github.io/crs-docs/api-reference
 [7]: https://knowledgelayer.softlayer.com/topic/cdn
+[search]: https://sldn.softlayer.com/article/API-Operations-Search-Services
